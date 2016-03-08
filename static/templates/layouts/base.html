@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div id="riot-tags"></div>
+    <router></router>
+	<!-- <actor-movie-list movies={ movies } actor={ actor }></actor-movie-list> -->
+</div>
+
+
+<!-- jquery -->
+<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+
+<!-- d3 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'></script>
+
+<!-- riot -->
+<script src='https://cdn.jsdelivr.net/riot/2.3.15/riot+compiler.min.js'></script>
+
+<!-- tooltip -->
+<script src="{% static 'js/tooltip.js' %}"></script>
+
+<!-- riot-tags -->
+<script type='riot/tag' src="{% static 'riot-tags/mojo-movie-list.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/router.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/navbar.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/dropdown.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/search.tag' %}"></script>
+<script type='riot/tag' src="{% static 'riot-tags/error-page.tag' %}"></script>
+
+<script type="text/javascript">
+
+    riot.route.stop()
+    riot.route.start(true);
+    bus = riot.observable();
+    riot.mount('router',{bus:bus})
+	
+</script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
+
