@@ -1,6 +1,7 @@
 ####Box office mojo api using django rest
 
-####D3 inside a riot tag! This example shows basic d3 scatter plot setup - including the scale and formatting of the plot. 
+###D3 inside a riot tag! 
+This example shows basic d3 scatter plot setup - including the scale and formatting of the plot. 
 
 ```javascript
 var self = this
@@ -125,7 +126,9 @@ opts.bus.on('setActor',function(actor){
 })
 	
 ```
-####get_movies will take a url and give you json. BeautifulSoup makes it all too easy.
+###get_movies 
+will take a url and give you json. BeautifulSoup makes traversing the dom all too easy.
+
 ```python
 from bs4 import BeautifulSoup
 import requests
