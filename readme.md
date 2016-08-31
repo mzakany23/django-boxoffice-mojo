@@ -1,6 +1,7 @@
 ####Box office mojo api using django rest
 
-####D3 inside a riot tag!
+####D3 inside a riot tag! This example shows basic d3 scatter plot setup - including the scale and formatting of the plot. 
+
 ```javascript
 var self = this
 
@@ -63,7 +64,7 @@ this.on('mount',function(){
 						})
 						.attr('r',function(d){
 							var sales = +d['lifetime_gross']
-              return rScale(sales)
+                            return rScale(sales)
 						})
 						.style('fill','blue')
 						.on('click',function(data){
@@ -75,12 +76,12 @@ this.on('mount',function(){
             .attr('class', 'cageAxis')
             .call(xAxis)
 
-  scatter.append('g')
+    scatter.append('g')
             .attr("transform", "translate(" + padding + ",0)")
             .attr('class', 'cageAxis')
             .call(yAxis)
   
-  $('svg circle').tipsy({
+    $('svg circle').tipsy({
       gravity: 'w',
       html: true,
       title: function(){
@@ -90,7 +91,7 @@ this.on('mount',function(){
           var amount = 'LIFETIME GROSS SALES: ' + toUSD(+d['lifetime_gross'])
           return  title + '\n' + date + "\n" + amount
       }
-  });
+    });
 })
 
 
