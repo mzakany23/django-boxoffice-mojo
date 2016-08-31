@@ -128,7 +128,7 @@ opts.bus.on('setActor',function(actor){
 	
 ```
 ###get_movies 
-will take a url and give you json. BeautifulSoup makes traversing the dom all too easy.
+Give a url, get json. BeautifulSoup makes traversing the dom all too easy.
 
 ```python
 from bs4 import BeautifulSoup
