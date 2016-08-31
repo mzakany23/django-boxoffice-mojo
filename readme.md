@@ -1,4 +1,5 @@
 ##[Box office Mojo](http://www.boxofficemojo.com/) api using [djangorestframework](http://www.django-rest-framework.org/) and [riot.js](http://riotjs.com/)
+One friday night I scraped box office mojo to better visualize Nicolas Cage's glorious movie career...
 
 ###D3 inside a riot tag! 
 This example shows basic d3 scatter plot setup - including the scale and formatting of the plot. 
